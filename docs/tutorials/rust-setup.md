@@ -112,7 +112,7 @@ Now you can commit and push these changes to github. First, navigate out of the 
 ```
 cd ..
 ```
-Then stages your changes and commit them, with an appropriate message, before pushing to your remote repository.
+Then stage your changes and commit them, with an appropriate message, before pushing to your remote repository.
 ```
 git add .
 git commit -m "Created Rust project"
@@ -120,4 +120,5 @@ git push origin main
 ```
 Now, you are done!
 
-
+## References
+[Citation 1 -> Kris Jordan's Tutorial](https://comp423-25s.github.io/resources/MkDocs/tutorial/)
