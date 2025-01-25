@@ -85,6 +85,39 @@ Once your dev container setup completes, close the current terminal tab, open a 
 ### Step 1: Initialize the Project
 We will now go through the steps for creating a new project in Rust. 
 
-1. In your dev container's terminal, run `cargo new --vcs-none`. The flag `--vcs-none` (Version Control System) prevents a new `git` repository from being created on your behalf.
-2. 
+1. In your dev container's terminal in your project's directory, run `cargo new <subdirectory-name> --vcs none`. The flag `--vcs none` (Version Control System) prevents a new `git` repository from being created on your behalf. This will create a new directory.
+2. Navigate into this directory through the terminal to the subdirectory.
+```
+cd <subdirectory-name>
+```
+3. Open `main.rs` and edit the default "Hello World!" program into "Hello COMP423!" as follows:
+```
+fn main() {
+    println!("Hello COMP423!");
+}
+```
+4. Save and then run `cargo run`. This will compile and run the program. You should see the output `Hello COMP423` in your terminal after.
+
+!!! note
+
+    You can also run `cargo build`. This will compile the program into an executible which you can find in the target folder. This is different from `cargo run` because it does not immediately run the program after it compiles it. Use `cargo build` when you want to send the executible file to others and not run it immediately. This executable file can be found in the `target/debug/`directory, and it will be of the same name as `<subdirectory-name>`. You can run this file by running `./target/debug/<subdirectory-name>` in your terminal, provided you are in the `<subdirectory-name>` directory.
+
+    !!! note
+
+        For those who are familiar with the C programming language, `cargo build` is Rust's way of compiling the program into bytecode, just like `gcc main.c -o my_program`. On the other hand `cargo run` does that, as well as running `./my_program` right after.
+
+
+### Step 2: Push to GitHub
+Now you can commit and push these changes to github. First, navigate out of the subdirectory.
+```
+cd ..
+```
+Then stages your changes and commit them, with an appropriate message, before pushing to your remote repository.
+```
+git add .
+git commit -m "Created Rust project"
+git push origin main
+```
+Now, you are done!
+
 
